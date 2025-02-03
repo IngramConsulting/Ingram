@@ -6,70 +6,48 @@
   <title>Financial Innovation | Ingram Consulting</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Custom CSS -->
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #F5F5F5; /* Light Gray */
+      background-color: #F5F5F5;
       color: #333;
     }
     .navbar {
-      background-color: #00274D; /* Navy Blue */
+      background-color: #00274D;
     }
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #FFFFFF !important; /* White */
-    }
-    .nav-link {
-      color: #FFFFFF !important; /* White */
+    .navbar-brand, .nav-link {
+      color: #FFFFFF !important;
     }
     .nav-link:hover {
-      color: #FFC857 !important; /* Gold */
+      color: #FFC857 !important;
     }
     .hero-section {
       background: linear-gradient(rgba(0, 39, 77, 0.8), rgba(0, 39, 77, 0.8)), url('LondonBG.jpg');
       background-size: cover;
       background-position: center;
-      color: #FFFFFF; /* White */
-      height: 50vh; /* Half viewport height */
-      text-align: center;
+      color: #FFFFFF;
+      height: 50vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
     .hero-section h1 {
       font-size: 3.5rem;
       font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero-section p {
-      font-size: 1.25rem;
-      margin-top: 20px;
-      margin-bottom: 40px;
     }
     .section-title {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #00274D; /* Navy Blue */
+      color: #00274D;
       margin-bottom: 40px;
-    }
-    .accordion-button {
-      background-color: #FFFFFF; /* White */
-      color: #00274D; /* Navy Blue */
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .accordion-button:not(.collapsed) {
-      background-color: #FFC857; /* Gold */
-      color: #00274D; /* Navy Blue */
-    }
-    .accordion-body {
-      background-color: #FFFFFF; /* White */
-      padding: 20px;
+      text-align: center;
     }
     .tool-section {
-      background-color: #FFFFFF; /* White */
+      background-color: #FFFFFF;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 20px;
@@ -77,7 +55,7 @@
     }
     .tool-section label {
       font-size: 1.25rem;
-      color: #00274D; /* Navy Blue */
+      color: #00274D;
       margin-bottom: 10px;
     }
     .tool-section input,
@@ -85,13 +63,13 @@
       width: 100%;
       padding: 10px;
       font-size: 1rem;
-      border: 1px solid #00274D; /* Navy Blue */
+      border: 1px solid #00274D;
       border-radius: 5px;
       margin-bottom: 20px;
     }
     .tool-section button {
-      background-color: #FFC857; /* Gold */
-      color: #00274D; /* Navy Blue */
+      background-color: #FFC857;
+      color: #00274D;
       border: none;
       padding: 10px 20px;
       font-size: 1rem;
@@ -99,24 +77,46 @@
       cursor: pointer;
     }
     .tool-section button:hover {
-      background-color: #FFFFFF; /* White */
-      color: #00274D; /* Navy Blue */
-      border: 1px solid #00274D; /* Navy Blue */
+      background-color: #FFFFFF;
+      color: #00274D;
+      border: 1px solid #00274D;
     }
-    .result {
+    .modal-content {
+      border-radius: 10px;
+    }
+    .modal-header {
+      background-color: #00274D;
+      color: #FFFFFF;
+      border-radius: 10px 10px 0 0;
+    }
+    .modal-title {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #00274D; /* Navy Blue */
-      margin-top: 20px;
+    }
+    .modal-body {
+      padding: 20px;
+    }
+    .modal-body h3 {
+      color: #00274D;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .progress {
+      height: 25px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .progress-bar {
+      background-color: #FFC857;
     }
     .footer {
-      background-color: #00274D; /* Navy Blue */
-      color: #FFFFFF; /* White */
+      background-color: #00274D;
+      color: #FFFFFF;
       padding: 40px 0;
       text-align: center;
     }
     .footer a {
-      color: #FFFFFF; /* White */
+      color: #FFFFFF;
       text-decoration: none;
     }
     .footer a:hover {
@@ -130,20 +130,14 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Ingram Consulting</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#about">About Us</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
         </ul>
       </div>
     </div>
@@ -159,16 +153,16 @@
 
   <!-- Tools Section -->
   <section class="container my-5">
-    <h2 class="section-title text-center">Financial Tools</h2>
+    <h2 class="section-title">Financial Tools</h2>
     <div class="accordion" id="toolsAccordion">
       <!-- Savings Calculator -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
             Savings Calculator
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#toolsAccordion">
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#toolsAccordion">
           <div class="accordion-body">
             <div class="tool-section">
               <p>Enter your monthly earnings below to calculate how much you should save (10% of your income).</p>
@@ -177,7 +171,6 @@
                 <input type="number" id="income" placeholder="Enter your monthly income" required>
                 <button type="button" onclick="calculateSavings()">Calculate</button>
               </form>
-              <div class="result" id="result"></div>
             </div>
           </div>
         </div>
@@ -186,11 +179,11 @@
       <!-- Budget Planner -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
             Personalized Budget Planner
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#toolsAccordion">
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#toolsAccordion">
           <div class="accordion-body">
             <div class="tool-section">
               <p>Enter your monthly expenses to get a personalized budget plan.</p>
@@ -205,57 +198,6 @@
                 <input type="number" id="entertainment" placeholder="Enter entertainment" required>
                 <button type="button" onclick="generateBudget()">Generate Budget</button>
               </form>
-              <div class="result" id="budgetResult"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Investment Recommendations -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Investment Recommendations
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#toolsAccordion">
-          <div class="accordion-body">
-            <div class="tool-section">
-              <p>Answer a few questions to get personalized investment recommendations.</p>
-              <form id="investmentForm">
-                <label for="riskTolerance">What is your risk tolerance?</label>
-                <select id="riskTolerance" required>
-                  <option value="low">Low</option>
-                  <option value="medium">Medium</option>
-                  <option value="high">High</option>
-                </select>
-                <button type="button" onclick="getInvestmentRecommendations()">Get Recommendations</button>
-              </form>
-              <div class="result" id="investmentResult"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Debt Repayment Planner -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Debt Repayment Planner
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#toolsAccordion">
-          <div class="accordion-body">
-            <div class="tool-section">
-              <p>Enter your debt details to get a repayment plan.</p>
-              <form id="debtPlanner">
-                <label for="debtAmount">Total Debt ($):</label>
-                <input type="number" id="debtAmount" placeholder="Enter total debt" required>
-                <label for="interestRate">Interest Rate (%):</label>
-                <input type="number" id="interestRate" placeholder="Enter interest rate" required>
-                <button type="button" onclick="generateDebtPlan()">Generate Plan</button>
-              </form>
-              <div class="result" id="debtResult"></div>
             </div>
           </div>
         </div>
@@ -264,11 +206,11 @@
       <!-- Financial Goal Tracker -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
             Financial Goal Tracker
           </button>
         </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#toolsAccordion">
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#toolsAccordion">
           <div class="accordion-body">
             <div class="tool-section">
               <p>Set a financial goal and track your progress.</p>
@@ -279,7 +221,6 @@
                 <input type="number" id="timeline" placeholder="Enter timeline" required>
                 <button type="button" onclick="calculateGoal()">Calculate</button>
               </form>
-              <div class="result" id="goalResult"></div>
             </div>
           </div>
         </div>
@@ -295,6 +236,59 @@
     </div>
   </footer>
 
+  <!-- Modals for Results -->
+  <!-- Savings Calculator Modal -->
+  <div class="modal fade" id="savingsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-piggy-bank"></i> Savings Recommendation</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>You should save: <strong>$<span id="savingsAmount"></span></strong> per month.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Budget Planner Modal -->
+  <div class="modal fade" id="budgetModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-chart-pie"></i> Budget Breakdown</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Total Expenses:</strong> $<span id="totalExpenses"></span></p>
+          <p><strong>Savings:</strong> $<span id="savings"></span></p>
+          <p><strong>Remaining:</strong> $<span id="remaining"></span></p>
+          <p id="budgetRecommendation"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Financial Goal Tracker Modal -->
+  <div class="modal fade" id="goalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-bullseye"></i> Goal Progress</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Monthly Savings Required:</strong> $<span id="monthlySavings"></span></p>
+          <div class="progress">
+            <div class="progress-bar" id="goalProgressBar" role="progressbar" style="width: 0%;"></div>
+          </div>
+          <p id="goalTip"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -308,83 +302,31 @@
         return;
       }
       const savings = income * 0.1;
-      document.getElementById('result').innerHTML = `You should save: <strong>$${savings.toFixed(2)}</strong> per month.`;
+      document.getElementById('savingsAmount').textContent = savings.toFixed(2);
+      const savingsModal = new bootstrap.Modal(document.getElementById('savingsModal'));
+      savingsModal.show();
     }
 
     // Budget Planner
     function generateBudget() {
-      const income = parseFloat(document.getElementById('income').value);
       const rent = parseFloat(document.getElementById('rent').value);
       const groceries = parseFloat(document.getElementById('groceries').value);
       const utilities = parseFloat(document.getElementById('utilities').value);
       const entertainment = parseFloat(document.getElementById('entertainment').value);
 
-      if (isNaN(income) || income <= 0) {
-        alert("Please enter a valid monthly income.");
-        return;
-      }
-
       const totalExpenses = rent + groceries + utilities + entertainment;
-      const savings = income * 0.1;
-      const remaining = income - totalExpenses - savings;
+      const savings = totalExpenses * 0.1;
+      const remaining = totalExpenses - savings;
 
-      let recommendations = [];
-      if (remaining < 0) {
-        recommendations.push("You are spending more than you earn. Consider reducing expenses.");
-      } else {
-        recommendations.push(`You have $${remaining.toFixed(2)} left after expenses and savings.`);
-      }
+      document.getElementById('totalExpenses').textContent = totalExpenses.toFixed(2);
+      document.getElementById('savings').textContent = savings.toFixed(2);
+      document.getElementById('remaining').textContent = remaining.toFixed(2);
 
-      document.getElementById('budgetResult').innerHTML = `
-        <strong>Budget Breakdown:</strong><br>
-        - Rent/Mortgage: $${rent.toFixed(2)}<br>
-        - Groceries: $${groceries.toFixed(2)}<br>
-        - Utilities: $${utilities.toFixed(2)}<br>
-        - Entertainment: $${entertainment.toFixed(2)}<br>
-        - Savings: $${savings.toFixed(2)}<br>
-        <strong>Recommendations:</strong><br>
-        ${recommendations.join("<br>")}
-      `;
-    }
+      let recommendation = remaining < 0 ? "You are spending more than you earn. Consider reducing expenses." : "You are on track with your budget!";
+      document.getElementById('budgetRecommendation').textContent = recommendation;
 
-    // Investment Recommendations
-    function getInvestmentRecommendations() {
-      const riskTolerance = document.getElementById('riskTolerance').value;
-      let recommendations = [];
-
-      if (riskTolerance === "low") {
-        recommendations.push("Consider low-risk investments like government bonds or high-yield savings accounts.");
-      } else if (riskTolerance === "medium") {
-        recommendations.push("Consider a balanced portfolio of stocks and bonds.");
-      } else if (riskTolerance === "high") {
-        recommendations.push("Consider high-risk investments like individual stocks or cryptocurrency.");
-      }
-
-      document.getElementById('investmentResult').innerHTML = `
-        <strong>Recommendations:</strong><br>
-        ${recommendations.join("<br>")}
-      `;
-    }
-
-    // Debt Repayment Planner
-    function generateDebtPlan() {
-      const debtAmount = parseFloat(document.getElementById('debtAmount').value);
-      const interestRate = parseFloat(document.getElementById('interestRate').value);
-
-      if (isNaN(debtAmount) || debtAmount <= 0 || isNaN(interestRate) || interestRate <= 0) {
-        alert("Please enter valid debt details.");
-        return;
-      }
-
-      const monthlyPayment = (debtAmount * (interestRate / 100)) / 12;
-      const monthsToRepay = Math.ceil(debtAmount / monthlyPayment);
-
-      document.getElementById('debtResult').innerHTML = `
-        <strong>Repayment Plan:</strong><br>
-        - Monthly Payment: $${monthlyPayment.toFixed(2)}<br>
-        - Months to Repay: ${monthsToRepay}<br>
-        <strong>Tip:</strong> Pay more than the minimum to reduce interest and pay off debt faster.
-      `;
+      const budgetModal = new bootstrap.Modal(document.getElementById('budgetModal'));
+      budgetModal.show();
     }
 
     // Financial Goal Tracker
@@ -398,11 +340,14 @@
       }
 
       const monthlySavings = goalAmount / timeline;
+      const progress = (monthlySavings / goalAmount) * 100;
 
-      document.getElementById('goalResult').innerHTML = `
-        <strong>Monthly Savings Required:</strong> $${monthlySavings.toFixed(2)}<br>
-        <strong>Tip:</strong> Automate your savings to stay on track.
-      `;
+      document.getElementById('monthlySavings').textContent = monthlySavings.toFixed(2);
+      document.getElementById('goalProgressBar').style.width = `${progress}%`;
+      document.getElementById('goalTip').textContent = "Tip: Automate your savings to stay on track.";
+
+      const goalModal = new bootstrap.Modal(document.getElementById('goalModal'));
+      goalModal.show();
     }
   </script>
 </body>
