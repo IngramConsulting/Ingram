@@ -6,7 +6,7 @@
   <title>Financial Innovation | Ingram Consulting</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Custom CSS -->
   <style>
@@ -14,11 +14,22 @@
       font-family: 'Arial', sans-serif;
       background-color: #F5F5F5;
       color: #333;
-    }
+      }
+     h1, h2, h3, h4, h5, h6 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: bold;
+      }
+
     .navbar {
       background-color: #00274D;
     }
-    .navbar-brand, .nav-link {
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+        font-family: 'Libre Baskerville', serif;
+      color: #FFFFFF !important;
+    }
+    .nav-link {
       color: #FFFFFF !important;
     }
     .nav-link:hover {
@@ -45,6 +56,59 @@
       color: #00274D;
       margin-bottom: 40px;
       text-align: center;
+    }
+    .service-section {
+      padding: 60px 0;
+      background-color: #FFFFFF;
+      border-radius: 15px;
+      margin: 40px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    .service-section.reverse {
+      background-color: #F8F9FA;
+    }
+    .service-img {
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 39, 77, 0.1);
+      max-height: 400px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 39, 77, 0.15);
+    }
+    .service-content {
+      padding: 30px;
+    }
+    .service-title {
+      font-size: 2.2rem;
+      color: #00274D;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+    .service-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 25px;
+    }
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .feature-list li {
+      margin-bottom: 12px;
+      padding-left: 30px;
+      position: relative;
+    }
+    .feature-list li:before {
+      content: "•";
+      color: #FFC857;
+      position: absolute;
+      left: 0;
+      font-size: 1.4em;
+      top: -2px;
     }
     .tool-section {
       background-color: #FFFFFF;
@@ -81,46 +145,49 @@
       color: #00274D;
       border: 1px solid #00274D;
     }
-    .modal-content {
-      border-radius: 10px;
-    }
-    .modal-header {
-      background-color: #00274D;
-      color: #FFFFFF;
-      border-radius: 10px 10px 0 0;
-    }
-    .modal-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .modal-body {
-      padding: 20px;
-    }
-    .modal-body h3 {
-      color: #00274D;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-    .progress {
-      height: 25px;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-    .progress-bar {
-      background-color: #FFC857;
-    }
     .footer {
       background-color: #00274D;
-      color: #FFFFFF;
-      padding: 40px 0;
-      text-align: center;
+      padding: 60px 0 30px;
+      position: relative;
+    }
+    .footer h5 {
+      color: #FFC857;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
     }
     .footer a {
-      color: #FFFFFF;
-      text-decoration: none;
+      transition: all 0.3s ease;
     }
     .footer a:hover {
-      text-decoration: underline;
+      color: #FFC857 !important;
+      text-decoration: none;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: none;
+      z-index: 1000;
+      background-color: #FFC857;
+      color: #00274D;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .back-to-top:hover {
+      background-color: #fff;
+      transform: translateY(-3px);
+    }
+    .service-card a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
@@ -130,14 +197,21 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Ingram Consulting</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About Us</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="page4.html">Clients</a></li>
         </ul>
       </div>
     </div>
@@ -151,7 +225,65 @@
     </div>
   </section>
 
-  <!-- Tools Section -->
+  <!-- Financial Modelling Section -->
+  <section class="container">
+    <div class="service-section">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="service-content">
+            <h2 class="service-title">Advanced Financial Modelling</h2>
+            <p class="service-text">
+              At Ingram Consulting, we specialize in creating dynamic financial models that provide actionable insights for your business. Our models include:
+            </p>
+            <ul class="feature-list">
+              <li>Scenario analysis and forecasting</li>
+              <li>Interactive dashboards with real-time data</li>
+              <li>Customizable financial projections</li>
+              <li>Risk assessment and mitigation strategies</li>
+              <li>Visualizations for clear decision-making</li>
+            </ul>
+            <p class="service-text">
+              Whether you're planning for growth, evaluating investments, or optimizing operations, our financial models deliver the clarity you need to make informed decisions.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="financial-model-example.jpg" alt="Financial Model Example" class="img-fluid service-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Optimization Section -->
+  <section class="container">
+    <div class="service-section reverse">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="col-lg-6">
+          <div class="service-content">
+            <h2 class="service-title">Budget Optimization</h2>
+            <p class="service-text">
+              Our team provides tailored budget recommendations to help you manage your finances effectively. We analyze your income, expenses, and financial goals to create a plan that maximizes savings and minimizes unnecessary spending.
+            </p>
+            <ul class="feature-list">
+              <li>Personalized budget plans</li>
+              <li>Cost-cutting strategies</li>
+              <li>Expense tracking tools</li>
+              <li>Savings optimization techniques</li>
+              <li>Long-term financial planning</li>
+            </ul>
+            <p class="service-text">
+              Whether you're looking to cut costs, allocate additional funds, or plan for future expenses, our strategies ensure you stay on track to achieve your financial objectives.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="budget-example.jpg" alt="Budget Example" class="img-fluid service-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Tools Section -->
   <section class="container my-5">
     <h2 class="section-title">Financial Tools</h2>
     <div class="accordion" id="toolsAccordion">
@@ -231,67 +363,70 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Ingram Consulting. All rights reserved.</p>
-      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      <div class="row g-4">
+        <!-- Company Info -->
+        <div class="col-md-4 text-center text-md-start">
+          <h5 class="mb-3">Ingram Consulting</h5>
+          <p class="small">Pioneering business solutions through innovation and strategic expertise.</p>
+          <div class="mt-3">
+            <a href="mailto:ing.matteo.bs@gmail.com" class="d-block text-white-50 small">
+              <i class="fas fa-envelope me-2"></i>ing.matteo.bs@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 text-center">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html#home" class="text-white-50">Home</a></li>
+            <li class="mb-2"><a href="index.html#services" class="text-white-50">Services</a></li>
+            <li class="mb-2"><a href="index.html#about" class="text-white-50">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-4 text-center text-md-end">
+          <h5 class="mb-3">Connect With Us</h5>
+          <div class="social-links">
+            <a href="https://www.instagram.com/ingram.matteo/" target="_blank" class="text-white-50 me-3">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/matteo-ingram/" target="_blank" class="text-white-50 me-3">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="https://x.com/matteooffical" class="text-white-50 me-3">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+          </div>
+          <div class="mt-4">
+            <a href="https://www.linkedin.com/in/matteo-ingram/" class="btn btn-outline-light btn-sm">Subscribe to Newsletter</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <hr class="mb-4 opacity-25">
+          <p class="small mb-0 text-white-50">
+            &copy; 2025 Ingram Consulting. All rights reserved.<br>
+            <a href="#" class="text-white-50">Privacy Policy</a> | 
+            <a href="#" class="text-white-50">Terms of Service</a> | 
+            <a href="#" class="text-white-50">Cookie Policy</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Back to Top -->
+      <a href="#home" class="btn btn-primary back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </div>
   </footer>
 
-  <!-- Modals for Results -->
-  <!-- Savings Calculator Modal -->
-  <div class="modal fade" id="savingsModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fas fa-piggy-bank"></i> Savings Recommendation</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p>You should save: <strong>$<span id="savingsAmount"></span></strong> per month.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Budget Planner Modal -->
-  <div class="modal fade" id="budgetModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fas fa-chart-pie"></i> Budget Breakdown</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p><strong>Total Expenses:</strong> $<span id="totalExpenses"></span></p>
-          <p><strong>Savings:</strong> $<span id="savings"></span></p>
-          <p><strong>Remaining:</strong> $<span id="remaining"></span></p>
-          <p id="budgetRecommendation"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Financial Goal Tracker Modal -->
-  <div class="modal fade" id="goalModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fas fa-bullseye"></i> Goal Progress</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p><strong>Monthly Savings Required:</strong> $<span id="monthlySavings"></span></p>
-          <div class="progress">
-            <div class="progress-bar" id="goalProgressBar" role="progressbar" style="width: 0%;"></div>
-          </div>
-          <p id="goalTip"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
   <!-- JavaScript for All Tools -->
   <script>
     // Savings Calculator
