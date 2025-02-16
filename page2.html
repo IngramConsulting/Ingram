@@ -14,19 +14,18 @@
       font-family: 'Arial', sans-serif;
       background-color: #F5F5F5;
       color: #333;
-      }
-     h1, h2, h3, h4, h5, h6 {
+    }
+    h1, h2, h3, h4, h5, h6 {
       font-family: 'Libre Baskerville', serif;
       font-weight: bold;
-      }
-
+    }
     .navbar {
       background-color: #00274D;
     }
     .navbar-brand {
       font-size: 1.5rem;
       font-weight: bold;
-        font-family: 'Libre Baskerville', serif;
+      font-family: 'Libre Baskerville', serif;
       color: #FFFFFF !important;
     }
     .nav-link {
@@ -57,57 +56,57 @@
       margin-bottom: 40px;
       text-align: center;
     }
-    .service-section {
-      padding: 60px 0;
+    .service-card {
       background-color: #FFFFFF;
-      border-radius: 15px;
-      margin: 40px 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-    .service-section.reverse {
-      background-color: #F8F9FA;
-    }
-    .service-img {
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 39, 77, 0.1);
-      max-height: 400px;
-      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
     }
-    .service-img:hover {
-      transform: translateY(-5px);
+    .service-card:hover {
+      transform: translateY(-10px);
       box-shadow: 0 8px 25px rgba(0, 39, 77, 0.15);
     }
-    .service-content {
-      padding: 30px;
-    }
-    .service-title {
-      font-size: 2.2rem;
+    .service-card h4 {
       color: #00274D;
-      margin-bottom: 25px;
-      font-weight: 700;
+      font-weight: bold;
+      margin-bottom: 20px;
     }
-    .service-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
+    .service-card p {
       color: #555;
-      margin-bottom: 25px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .service-card .btn-primary {
+      background-color: #FFC857;
+      border: none;
+      color: #00274D;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .service-card .btn-primary:hover {
+      background-color: #00274D;
+      color: #FFFFFF;
     }
     .feature-list {
       list-style: none;
       padding-left: 0;
     }
     .feature-list li {
-      margin-bottom: 12px;
-      padding-left: 30px;
+      margin-bottom: 10px;
+      padding-left: 25px;
       position: relative;
+      color: #555;
     }
     .feature-list li:before {
       content: "•";
       color: #FFC857;
       position: absolute;
       left: 0;
-      font-size: 1.4em;
+      font-size: 1.2em;
       top: -2px;
     }
     .tool-section {
@@ -180,14 +179,10 @@
       background-color: #fff;
       transform: translateY(-3px);
     }
-    .service-card a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-      color: inherit;
+    #services {
+      background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%);
+      padding: 60px 0;
+      border-radius: 15px;
     }
   </style>
 </head>
@@ -211,7 +206,6 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html#about">About Us</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="page4.html">Clients</a></li>
         </ul>
       </div>
     </div>
@@ -225,59 +219,64 @@
     </div>
   </section>
 
-  <!-- Financial Modelling Section -->
-  <section class="container">
-    <div class="service-section">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="service-content">
-            <h2 class="service-title">Advanced Financial Modelling</h2>
-            <p class="service-text">
-              At Ingram Consulting, we specialize in creating dynamic financial models that provide actionable insights for your business. Our models include:
-            </p>
-            <ul class="feature-list">
-              <li>Scenario analysis and forecasting</li>
-              <li>Interactive dashboards with real-time data</li>
-              <li>Customizable financial projections</li>
-              <li>Risk assessment and mitigation strategies</li>
-              <li>Visualizations for clear decision-making</li>
-            </ul>
-            <p class="service-text">
-              Whether you're planning for growth, evaluating investments, or optimizing operations, our financial models deliver the clarity you need to make informed decisions.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <img src="financial-model-example.jpg" alt="Financial Model Example" class="img-fluid service-img">
+  <!-- Services Section -->
+  <section id="services" class="container my-5 py-5">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row g-4">
+      <!-- Financial Modelling Card -->
+      <div class="col-md-4">
+        <div class="service-card text-center p-4 h-100">
+          <i class="fas fa-chart-line fa-3x mb-3" style="color: #00274D;"></i>
+          <h4 class="mb-3">Financial Modelling</h4>
+          <p class="service-text">
+            At Ingram Consulting, we specialize in creating dynamic financial models that provide actionable insights for your business.
+          </p>
+          <ul class="feature-list text-start">
+            <li>Scenario analysis and forecasting</li>
+            <li>Interactive dashboards with real-time data</li>
+            <li>Customizable financial projections</li>
+            <li>Risk assessment and mitigation strategies</li>
+            <li>Visualizations for clear decision-making</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Budget Optimization Section -->
-  <section class="container">
-    <div class="service-section reverse">
-      <div class="row align-items-center g-5 flex-lg-row-reverse">
-        <div class="col-lg-6">
-          <div class="service-content">
-            <h2 class="service-title">Budget Optimization</h2>
-            <p class="service-text">
-              Our team provides tailored budget recommendations to help you manage your finances effectively. We analyze your income, expenses, and financial goals to create a plan that maximizes savings and minimizes unnecessary spending.
-            </p>
-            <ul class="feature-list">
-              <li>Personalized budget plans</li>
-              <li>Cost-cutting strategies</li>
-              <li>Expense tracking tools</li>
-              <li>Savings optimization techniques</li>
-              <li>Long-term financial planning</li>
-            </ul>
-            <p class="service-text">
-              Whether you're looking to cut costs, allocate additional funds, or plan for future expenses, our strategies ensure you stay on track to achieve your financial objectives.
-            </p>
-          </div>
+      <!-- Data Analysis Card -->
+      <div class="col-md-4">
+        <div class="service-card text-center p-4 h-100">
+          <i class="fas fa-bullseye fa-3x mb-3" style="color: #00274D;"></i>
+          <h4 class="mb-3">Data Analysis</h4>
+          <p class="service-text">
+            Our team provides tailored budget recommendations to help you manage your finances effectively.
+          </p>
+          <ul class="feature-list text-start">
+            <li>Personalized budget plans</li>
+            <li>Cost-cutting strategies</li>
+            <li>Expense tracking tools</li>
+            <li>Savings optimization techniques</li>
+            <li>Long-term financial planning</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
         </div>
-        <div class="col-lg-6">
-          <img src="budget-example.jpg" alt="Budget Example" class="img-fluid service-img">
+      </div>
+
+      <!-- Business Development Card -->
+      <div class="col-md-4">
+        <div class="service-card text-center p-4 h-100">
+          <i class="fas fa-users fa-3x mb-3" style="color: #00274D;"></i>
+          <h4 class="mb-3">Business Development</h4>
+          <p class="service-text">
+            Identify new opportunities and implement growth strategies that work, based on your company's budget and strengths.
+          </p>
+          <ul class="feature-list text-start">
+            <li>Market analysis and research</li>
+            <li>Strategic partnership development</li>
+            <li>Revenue growth strategies</li>
+            <li>Competitive analysis</li>
+            <li>Scalability planning</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
         </div>
       </div>
     </div>
@@ -360,6 +359,15 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="container my-5">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="text-center">Reach out to us and let's build something great.</p>
+    <div class="text-center">
+      <a href="mailto:info@ingramconsulting.com" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -382,6 +390,7 @@
             <li class="mb-2"><a href="index.html#home" class="text-white-50">Home</a></li>
             <li class="mb-2"><a href="index.html#services" class="text-white-50">Services</a></li>
             <li class="mb-2"><a href="index.html#about" class="text-white-50">About Us</a></li>
+            <li class="mb-2"><a href="page4.html" class="text-white-50">Clients</a></li>
           </ul>
         </div>
 
@@ -437,9 +446,7 @@
         return;
       }
       const savings = income * 0.1;
-      document.getElementById('savingsAmount').textContent = savings.toFixed(2);
-      const savingsModal = new bootstrap.Modal(document.getElementById('savingsModal'));
-      savingsModal.show();
+      alert(`You should save $${savings.toFixed(2)} per month.`);
     }
 
     // Budget Planner
@@ -453,15 +460,7 @@
       const savings = totalExpenses * 0.1;
       const remaining = totalExpenses - savings;
 
-      document.getElementById('totalExpenses').textContent = totalExpenses.toFixed(2);
-      document.getElementById('savings').textContent = savings.toFixed(2);
-      document.getElementById('remaining').textContent = remaining.toFixed(2);
-
-      let recommendation = remaining < 0 ? "You are spending more than you earn. Consider reducing expenses." : "You are on track with your budget!";
-      document.getElementById('budgetRecommendation').textContent = recommendation;
-
-      const budgetModal = new bootstrap.Modal(document.getElementById('budgetModal'));
-      budgetModal.show();
+      alert(`Total Expenses: $${totalExpenses.toFixed(2)}\nSavings: $${savings.toFixed(2)}\nRemaining: $${remaining.toFixed(2)}`);
     }
 
     // Financial Goal Tracker
@@ -475,14 +474,7 @@
       }
 
       const monthlySavings = goalAmount / timeline;
-      const progress = (monthlySavings / goalAmount) * 100;
-
-      document.getElementById('monthlySavings').textContent = monthlySavings.toFixed(2);
-      document.getElementById('goalProgressBar').style.width = `${progress}%`;
-      document.getElementById('goalTip').textContent = "Tip: Automate your savings to stay on track.";
-
-      const goalModal = new bootstrap.Modal(document.getElementById('goalModal'));
-      goalModal.show();
+      alert(`You need to save $${monthlySavings.toFixed(2)} per month to reach your goal.`);
     }
   </script>
 </body>
