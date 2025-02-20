@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Financial Innovation | Ingram Consulting</title>
+  <title>Ingram Capital | Hedge Fund Excellence</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
@@ -56,93 +56,80 @@
       margin-bottom: 40px;
       text-align: center;
     }
-    .service-card {
+    .strategy-card {
       background-color: #FFFFFF;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       height: 100%;
     }
-    .service-card:hover {
+    .strategy-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 25px rgba(0, 39, 77, 0.15);
     }
-    .service-card h4 {
+    .strategy-card h4 {
       color: #00274D;
       font-weight: bold;
       margin-bottom: 20px;
     }
-    .service-card p {
+    .strategy-card p {
       color: #555;
       font-size: 0.95rem;
       line-height: 1.6;
     }
-    .service-card .btn-primary {
+    .strategy-card .icon {
+      font-size: 2.5rem;
+      color: #FFC857;
+      margin-bottom: 20px;
+    }
+    .performance-section {
+      background: linear-gradient(135deg, #00274D 0%, #004080 100%);
+      padding: 60px 0;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    .performance-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .performance-stats {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .performance-stats span {
+      color: #FFC857;
+    }
+    .cta-section {
+      background-color: #FFFFFF;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00274D;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .cta-section .btn-primary {
       background-color: #FFC857;
       border: none;
       color: #00274D;
       font-weight: bold;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-    .service-card .btn-primary:hover {
+    .cta-section .btn-primary:hover {
       background-color: #00274D;
       color: #FFFFFF;
-    }
-    .feature-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .feature-list li {
-      margin-bottom: 10px;
-      padding-left: 25px;
-      position: relative;
-      color: #555;
-    }
-    .feature-list li:before {
-      content: "•";
-      color: #FFC857;
-      position: absolute;
-      left: 0;
-      font-size: 1.2em;
-      top: -2px;
-    }
-    .tool-section {
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .tool-section label {
-      font-size: 1.25rem;
-      color: #00274D;
-      margin-bottom: 10px;
-    }
-    .tool-section input,
-    .tool-section select {
-      width: 100%;
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #00274D;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-    .tool-section button {
-      background-color: #FFC857;
-      color: #00274D;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .tool-section button:hover {
-      background-color: #FFFFFF;
-      color: #00274D;
-      border: 1px solid #00274D;
     }
     .footer {
       background-color: #00274D;
@@ -179,11 +166,6 @@
       background-color: #fff;
       transform: translateY(-3px);
     }
-    #services {
-      background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%);
-      padding: 60px 0;
-      border-radius: 15px;
-    }
   </style>
 </head>
 <body>
@@ -191,7 +173,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Ingram Consulting</a>
+      <a class="navbar-brand" href="index.html">Ingram Capital</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -201,7 +183,7 @@
             <a class="nav-link active" href="index.html#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#services">Services</a>
+            <a class="nav-link" href="index.html#strategies">Strategies</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html#about">About Us</a>
@@ -214,157 +196,66 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <h1>Financial Innovation</h1>
-      <p>Discover how to optimize your finances and plan for the future with our innovative tools and strategies.</p>
+      <h1>Ingram Capital</h1>
+      <p>Strategic Investments, Proven Returns</p>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="container my-5 py-5">
-    <h2 class="section-title">Our Services</h2>
-    <div class="row g-4">
-      <!-- Financial Modelling Card -->
-      <div class="col-md-4">
-        <div class="service-card text-center p-4 h-100">
-          <i class="fas fa-chart-line fa-3x mb-3" style="color: #00274D;"></i>
-          <h4 class="mb-3">Financial Modelling</h4>
-          <p class="service-text">
-            At Ingram Consulting, we specialize in creating dynamic financial models that provide actionable insights for your business.
-          </p>
-          <ul class="feature-list text-start">
-            <li>Scenario analysis and forecasting</li>
-            <li>Interactive dashboards with real-time data</li>
-            <li>Customizable financial projections</li>
-            <li>Risk assessment and mitigation strategies</li>
-            <li>Visualizations for clear decision-making</li>
-          </ul>
-          <a href="#" class="btn btn-primary mt-3">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Data Analysis Card -->
-      <div class="col-md-4">
-        <div class="service-card text-center p-4 h-100">
-          <i class="fas fa-bullseye fa-3x mb-3" style="color: #00274D;"></i>
-          <h4 class="mb-3">Data Analysis</h4>
-          <p class="service-text">
-            Our team provides tailored budget recommendations to help you manage your finances effectively.
-          </p>
-          <ul class="feature-list text-start">
-            <li>Personalized budget plans</li>
-            <li>Cost-cutting strategies</li>
-            <li>Expense tracking tools</li>
-            <li>Savings optimization techniques</li>
-            <li>Long-term financial planning</li>
-          </ul>
-          <a href="#" class="btn btn-primary mt-3">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Business Development Card -->
-      <div class="col-md-4">
-        <div class="service-card text-center p-4 h-100">
-          <i class="fas fa-users fa-3x mb-3" style="color: #00274D;"></i>
-          <h4 class="mb-3">Business Development</h4>
-          <p class="service-text">
-            Identify new opportunities and implement growth strategies that work, based on your company's budget and strengths.
-          </p>
-          <ul class="feature-list text-start">
-            <li>Market analysis and research</li>
-            <li>Strategic partnership development</li>
-            <li>Revenue growth strategies</li>
-            <li>Competitive analysis</li>
-            <li>Scalability planning</li>
-          </ul>
-          <a href="#" class="btn btn-primary mt-3">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Financial Tools Section -->
+  <!-- Investment Strategy -->
   <section class="container my-5">
-    <h2 class="section-title">Financial Tools</h2>
-    <div class="accordion" id="toolsAccordion">
-      <!-- Savings Calculator -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-            Savings Calculator
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#toolsAccordion">
-          <div class="accordion-body">
-            <div class="tool-section">
-              <p>Enter your monthly earnings below to calculate how much you should save (10% of your income).</p>
-              <form id="savingsCalculator">
-                <label for="income">Monthly Income ($):</label>
-                <input type="number" id="income" placeholder="Enter your monthly income" required>
-                <button type="button" onclick="calculateSavings()">Calculate</button>
-              </form>
-            </div>
-          </div>
+    <h2 class="section-title">Our Investment Strategies</h2>
+    <div class="row g-4">
+      <!-- Equity Strategy -->
+      <div class="col-md-4">
+        <div class="strategy-card text-center">
+          <i class="fas fa-chart-line icon"></i>
+          <h4>Equity Investments</h4>
+          <p>We focus on high-conviction equity opportunities, leveraging fundamental analysis and market trends to deliver superior returns.</p>
         </div>
       </div>
-
-      <!-- Budget Planner -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-            Personalized Budget Planner
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#toolsAccordion">
-          <div class="accordion-body">
-            <div class="tool-section">
-              <p>Enter your monthly expenses to get a personalized budget plan.</p>
-              <form id="budgetPlanner">
-                <label for="rent">Rent/Mortgage ($):</label>
-                <input type="number" id="rent" placeholder="Enter rent/mortgage" required>
-                <label for="groceries">Groceries ($):</label>
-                <input type="number" id="groceries" placeholder="Enter groceries" required>
-                <label for="utilities">Utilities ($):</label>
-                <input type="number" id="utilities" placeholder="Enter utilities" required>
-                <label for="entertainment">Entertainment ($):</label>
-                <input type="number" id="entertainment" placeholder="Enter entertainment" required>
-                <button type="button" onclick="generateBudget()">Generate Budget</button>
-              </form>
-            </div>
-          </div>
+      <!-- Fixed Income -->
+      <div class="col-md-4">
+        <div class="strategy-card text-center">
+          <i class="fas fa-coins icon"></i>
+          <h4>Fixed Income</h4>
+          <p>Our fixed income strategies aim to generate stable returns through diversified portfolios of bonds and other debt instruments.</p>
         </div>
       </div>
-
-      <!-- Financial Goal Tracker -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-            Financial Goal Tracker
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#toolsAccordion">
-          <div class="accordion-body">
-            <div class="tool-section">
-              <p>Set a financial goal and track your progress.</p>
-              <form id="goalTracker">
-                <label for="goalAmount">Goal Amount ($):</label>
-                <input type="number" id="goalAmount" placeholder="Enter goal amount" required>
-                <label for="timeline">Timeline (months):</label>
-                <input type="number" id="timeline" placeholder="Enter timeline" required>
-                <button type="button" onclick="calculateGoal()">Calculate</button>
-              </form>
-            </div>
-          </div>
+      <!-- Alternative Investments -->
+      <div class="col-md-4">
+        <div class="strategy-card text-center">
+          <i class="fas fa-cogs icon"></i>
+          <h4>Alternative Investments</h4>
+          <p>We explore alternative assets, including real estate, commodities, and private equity, to enhance portfolio diversification.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container my-5">
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="text-center">Reach out to us and let's build something great.</p>
-    <div class="text-center">
-      <a href="mailto:info@ingramconsulting.com" class="btn btn-primary">Contact Us</a>
+  <!-- Performance Section -->
+  <section class="performance-section">
+    <div class="container">
+      <h2>Proven Performance</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="performance-stats">Annual Return: <span>+34.7%</span></p>
+        </div>
+        <div class="col-md-4">
+          <p class="performance-stats">Sharpe Ratio: <span>1.5</span></p>
+        </div>
+        <div class="col-md-4">
+          <p class="performance-stats">AUM: <span>N/A</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Invest with Confidence</h2>
+      <p>Partner with a hedge fund that prioritizes performance and transparency.</p>
+      <a href="mailto:invest@ingramcapital.com" class="btn btn-primary">Get Started</a>
     </div>
   </section>
 
@@ -374,7 +265,7 @@
       <div class="row g-4">
         <!-- Company Info -->
         <div class="col-md-4 text-center text-md-start">
-          <h5 class="mb-3">Ingram Consulting</h5>
+          <h5 class="mb-3">Ingram Capital</h5>
           <p class="small">Pioneering business solutions through innovation and strategic expertise.</p>
           <div class="mt-3">
             <a href="mailto:ing.matteo.bs@gmail.com" class="d-block text-white-50 small">
@@ -388,9 +279,8 @@
           <h5 class="mb-3">Quick Links</h5>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html#home" class="text-white-50">Home</a></li>
-            <li class="mb-2"><a href="index.html#services" class="text-white-50">Services</a></li>
+            <li class="mb-2"><a href="index.html#strategies" class="text-white-50">Strategies</a></li>
             <li class="mb-2"><a href="index.html#about" class="text-white-50">About Us</a></li>
-            <li class="mb-2"><a href="page4.html" class="text-white-50">Clients</a></li>
           </ul>
         </div>
 
@@ -419,7 +309,7 @@
         <div class="col-12 text-center">
           <hr class="mb-4 opacity-25">
           <p class="small mb-0 text-white-50">
-            &copy; 2025 Ingram Consulting. All rights reserved.<br>
+            &copy; 2025 Ingram Capital. All rights reserved.<br>
             <a href="#" class="text-white-50">Privacy Policy</a> | 
             <a href="#" class="text-white-50">Terms of Service</a> | 
             <a href="#" class="text-white-50">Cookie Policy</a>
@@ -436,46 +326,5 @@
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- JavaScript for All Tools -->
-  <script>
-    // Savings Calculator
-    function calculateSavings() {
-      const income = parseFloat(document.getElementById('income').value);
-      if (isNaN(income) || income <= 0) {
-        alert("Please enter a valid monthly income.");
-        return;
-      }
-      const savings = income * 0.1;
-      alert(`You should save $${savings.toFixed(2)} per month.`);
-    }
-
-    // Budget Planner
-    function generateBudget() {
-      const rent = parseFloat(document.getElementById('rent').value);
-      const groceries = parseFloat(document.getElementById('groceries').value);
-      const utilities = parseFloat(document.getElementById('utilities').value);
-      const entertainment = parseFloat(document.getElementById('entertainment').value);
-
-      const totalExpenses = rent + groceries + utilities + entertainment;
-      const savings = totalExpenses * 0.1;
-      const remaining = totalExpenses - savings;
-
-      alert(`Total Expenses: $${totalExpenses.toFixed(2)}\nSavings: $${savings.toFixed(2)}\nRemaining: $${remaining.toFixed(2)}`);
-    }
-
-    // Financial Goal Tracker
-    function calculateGoal() {
-      const goalAmount = parseFloat(document.getElementById('goalAmount').value);
-      const timeline = parseFloat(document.getElementById('timeline').value);
-
-      if (isNaN(goalAmount) || goalAmount <= 0 || isNaN(timeline) || timeline <= 0) {
-        alert("Please enter valid goal details.");
-        return;
-      }
-
-      const monthlySavings = goalAmount / timeline;
-      alert(`You need to save $${monthlySavings.toFixed(2)} per month to reach your goal.`);
-    }
-  </script>
 </body>
 </html>
