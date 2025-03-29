@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingram Consulting | Future of Consulting & Finance</title>
+  <title>Ingram Capital | Investment Management & Hedge Fund</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
@@ -18,7 +18,7 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Libre Baskerville', serif;
       font-weight: bold;
-      }
+    }
       
     .navbar {
       background-color: #00274D;
@@ -26,7 +26,7 @@
     .navbar-brand {
       font-size: 1.5rem;
       font-weight: bold;
-        font-family: 'Libre Baskerville', serif;
+      font-family: 'Libre Baskerville', serif;
       color: #FFFFFF !important;
     }
     .nav-link {
@@ -136,7 +136,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
-        color: black;
+      color: black;
     }
     .service-card:hover {
       transform: translateY(-10px);
@@ -165,6 +165,34 @@
       background-color: #fff;
       padding: 50px 0;
     }
+    
+    .performance-section {
+      background-color: #00274D;
+      color: white;
+      padding: 60px 0;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFC857;
+    }
+    
+    .stat-label {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    
+    .investment-strategy {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    
+    .strategy-card {
+      border-left: 4px solid #FFC857;
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
   </style>
 </head>
 <body>
@@ -172,7 +200,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Ingram Consulting</a>
+      <a class="navbar-brand" href="#">Ingram Capital</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -182,7 +210,10 @@
             <a class="nav-link active" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#strategies">Investment Strategies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#performance">Performance</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About Us</a>
@@ -195,48 +226,78 @@
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="container">
-      <h1>Shaping the Future of Consulting & Finance</h1>
-      <p>At Ingram Consulting, we empower businesses to navigate the complexities of tomorrow with innovative strategies and cutting-edge solutions.</p>
-      <a href="#services" class="btn btn-lg">Explore Our Services</a>
+      <h1>Strategic Investment Management</h1>
+      <p>At Ingram Capital, we combine fundamental analysis with quantitative models to deliver superior risk-adjusted returns for our investors.</p>
+      <a href="#strategies" class="btn btn-lg">Our Investment Approach</a>
     </div>
   </section>
 
-  <!-- Services Section -->
-    <section id="services" class="container my-5">
-    <h2 class="section-title text-center">Our Services</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <a href="page1.html" class="text-decoration-none">
-          <div class="service-card">
-            <h3>Strategic Consulting</h3>
-            <p>In today's fast-paced world, strategic planning is key to staying ahead of the competition. Our experts work closely with you to craft tailored strategies that align with your business goals and market demands.</p>
-            <p>We offer in-depth market research, competitor analysis, and performance evaluation to identify opportunities and challenges. Our strategies are designed to help you navigate the complexities of the modern business environment.</p>
+  <!-- Investment Strategies Section -->
+  <section id="strategies" class="investment-strategy">
+    <div class="container">
+      <h2 class="section-title text-center">Our Investment Strategies</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="strategy-card">
+            <h3>Long/Short Equity</h3>
+            <p>Our flagship strategy combines deep fundamental research with quantitative screening to identify mispriced securities across global markets. We maintain a disciplined approach to both long and short positions, focusing on companies with strong valuation metrics and identifiable catalysts.</p>
           </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="page2.html" class="text-decoration-none">
-          <div class="service-card">
-            <h3>Hedge Fund</h3>
-              <p>Investment excellence is more than just adopting the latest strategies—it's about transforming your portfolio. We are focusing on the key fundamentls of investment strategy, focusing on company valuations utilising advance programs and AI tools.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="strategy-card">
+            <h3>Quantitative Value</h3>
+            <p>Leveraging proprietary algorithms and machine learning models, we systematically identify undervalued securities with strong balance sheets and improving fundamentals. Our quantitative approach allows us to efficiently scan thousands of securities across multiple markets.</p>
           </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="page3.html" class="text-decoration-none">
-          <div class="service-card">
-            <h3>Investing in the  Future</h3>
-          <p>Our goal is to collaborate with companies, fostering growth to build a more sustainable and healthier future for businesses.</p> <p>We are dedicated to supporting renewable energy companies by providing the resources, strategies, and partnerships they need to grow and expand across Europe. By facilitating innovation, investment, and market access, we help drive the transition to a cleaner, more sustainable energy future.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="strategy-card">
+            <h3>Event-Driven</h3>
+            <p>We capitalize on corporate events such as mergers, spin-offs, restructurings, and other special situations where pricing inefficiencies often emerge. Our team's experience in corporate finance and legal analysis gives us an edge in assessing event outcomes.</p>
           </div>
-        </a>
+        </div>
+        <div class="col-md-6">
+          <div class="strategy-card">
+            <h3>Sustainable Growth</h3>
+            <p>Focusing on companies driving innovation in renewable energy, clean technology, and sustainable infrastructure. We combine traditional financial analysis with ESG metrics to identify leaders in the transition to a low-carbon economy.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-    
-<!-- Stock Market Live Updates -->
+
+  <!-- Performance Section -->
+  <section id="performance" class="performance-section">
+    <div class="container">
+      <h2 class="section-title text-center text-white">Investment Performance</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="stat-number">29.7%</div>
+          <div class="stat-label">Annualized Return</div>
+          <p class="text-white-50 mt-2">Since inception</p>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-number">2.4</div>
+          <div class="stat-label">Sharpe Ratio</div>
+          <p class="text-white-50 mt-2">1-year average</p>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-number">N/A</div>
+          <div class="stat-label">Assets Under Management</div>
+          <p class="text-white-50 mt-2">As of current quarter</p>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-number">2%</div>
+          <div class="stat-label">Annual Volatility</div>
+          <p class="text-white-50 mt-2">1-year average</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stock Market Live Updates -->
   <section id="market" class="stock-market-section">
     <div class="container">
-      <h2 class="section-title text-center">Live Stock Market Performance</h2>
+      <h2 class="section-title text-center">Live Market Performance</h2>
       <div class="tradingview-widget-container">
         <div id="tradingview-widget"></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js">
@@ -279,21 +340,18 @@
     </div>
   </section>
 
-    
-    
-
   <!-- About Us Section -->
   <section id="about" class="bg-light py-5">
     <div class="container">
-      <h2 class="section-title text-center">About Us</h2>
+      <h2 class="section-title text-center">About Ingram Capital</h2>
       <div class="row">
         <div class="col-md-6">
-          <p>At Ingram Consulting, we believe that innovation and collaboration are the driving forces behind business success. Our team is made up of industry experts with a passion for helping companies navigate the ever-evolving landscape of consulting and finance.</p>
-          <p>Our approach focuses on understanding the unique challenges and goals of each client, and crafting customized solutions that deliver results. We take the time to build strong, lasting relationships with our clients.</p>
+          <p>Founded with the vision of delivering superior risk-adjusted returns through disciplined investment strategies, Ingram Capital has grown into a respected investment management firm serving institutional and high-net-worth investors.</p>
+          <p>Our team combines decades of experience across hedge funds, investment banks, and asset management firms. We bring together fundamental research, quantitative analysis, and rigorous risk management to identify investment opportunities others may overlook.</p>
         </div>
         <div class="col-md-6">
-          <p>We are committed to fostering a culture of continuous learning and innovation, ensuring that we stay ahead of the curve in a rapidly changing business environment. Our team is driven by a shared commitment to excellence.</p>
-          <p>As we look to the future, we remain focused on delivering transformative solutions that drive long-term growth and success. Join us on the journey to reshape the future of consulting and finance!</p>
+          <p>We operate with a performance-driven culture that emphasizes transparency, accountability, and alignment of interests with our investors. Our investment professionals are significant investors in our funds, ensuring our interests are fully aligned with those of our clients.</p>
+          <p>Our approach is rooted in deep fundamental analysis, complemented by proprietary quantitative models that help us identify valuation anomalies and emerging trends across global markets.</p>
         </div>
       </div>
     </div>
@@ -305,10 +363,10 @@
       <div class="row g-4">
         <!-- Company Info -->
         <div class="col-md-4 text-center text-md-start">
-          <h5 class="mb-3">Ingram Consulting</h5>
-          <p class="small">Pioneering business solutions through innovation and strategic expertise.</p>
+          <h5 class="mb-3">Ingram Capital</h5>
+          <p class="small">Delivering superior risk-adjusted returns through disciplined investment strategies.</p>
           <div class="mt-3">
-            <a href="mailto:ing.matteo.bs@gmail.com" class="d-block text-white-50 small">
+            <a href="mailto:investor.relations@ingramcapital.com" class="d-block text-white-50 small">
               <i class="fas fa-envelope me-2"></i>ing.matteo.bs@gmail.com
             </a>
           </div>
@@ -319,10 +377,9 @@
           <h5 class="mb-3">Quick Links</h5>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="#home" class="text-white-50">Home</a></li>
-            <li class="mb-2"><a href="#services" class="text-white-50">Services</a></li>
-              <li class="mb-2"><a href="#about" class="text-white-50">About Us</a></li>
-              <li class="mb-2"><a href="page4.html" class="text-white-50">Clients</a></li>
-              
+            <li class="mb-2"><a href="#strategies" class="text-white-50">Investment Strategies</a></li>
+            <li class="mb-2"><a href="#performance" class="text-white-50">Performance</a></li>
+            <li class="mb-2"><a href="#about" class="text-white-50">About Us</a></li>
           </ul>
         </div>
 
@@ -330,18 +387,15 @@
         <div class="col-md-4 text-center text-md-end">
           <h5 class="mb-3">Connect With Us</h5>
           <div class="social-links">
-            <a href="https://www.instagram.com/ingram.matteo/" target="_blank" class="text-white-50 me-3">
-              <i class="fab fa-instagram fa-lg"></i>
-            </a>
             <a href="https://www.linkedin.com/in/matteo-ingram/" target="_blank" class="text-white-50 me-3">
               <i class="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="https://x.com/matteooffical" class="text-white-50 me-3">
+            <a href="https://x.com/matteooffical" target="_blank" class="text-white-50 me-3">
               <i class="fab fa-twitter fa-lg"></i>
             </a>
           </div>
           <div class="mt-4">
-            <a href="https://www.linkedin.com/in/matteo-ingram/" class="btn btn-outline-light btn-sm">Subscribe to Newsletter</a>
+            <a href="#contact" class="btn btn-outline-light btn-sm">Investor Login</a>
           </div>
         </div>
       </div>
@@ -351,10 +405,10 @@
         <div class="col-12 text-center">
           <hr class="mb-4 opacity-25">
           <p class="small mb-0 text-white-50">
-            &copy; 2025 Ingram Consulting. All rights reserved.<br>
+            &copy; 2025 Ingram Capital Management. All rights reserved.<br>
             <a href="#" class="text-white-50">Privacy Policy</a> | 
             <a href="#" class="text-white-50">Terms of Service</a> | 
-            <a href="#" class="text-white-50">Cookie Policy</a>
+            <a href="#" class="text-white-50">Disclosures</a>
           </p>
         </div>
       </div>
