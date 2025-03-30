@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingram Capital | Hedge Fund Excellence</title>
+  <title>Ingram Capital | Investment Management & Hedge Fund</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
@@ -19,6 +19,7 @@
       font-family: 'Libre Baskerville', serif;
       font-weight: bold;
     }
+      
     .navbar {
       background-color: #00274D;
     }
@@ -39,97 +40,38 @@
       background-size: cover;
       background-position: center;
       color: #FFFFFF;
-      height: 50vh;
+      height: 100vh;
+      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
     }
     .hero-section h1 {
       font-size: 3.5rem;
       font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .hero-section .btn {
+      font-size: 1rem;
+      padding: 10px 30px;
+      background-color: #FFC857;
+      color: #00274D;
+      border: none;
+    }
+    .hero-section .btn:hover {
+      background-color: #FFFFFF;
+      color: #00274D;
     }
     .section-title {
       font-size: 2.5rem;
       font-weight: bold;
       color: #00274D;
       margin-bottom: 40px;
-      text-align: center;
-    }
-    .strategy-card {
-      background-color: #FFFFFF;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
-    }
-    .strategy-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 25px rgba(0, 39, 77, 0.15);
-    }
-    .strategy-card h4 {
-      color: #00274D;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .strategy-card p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .strategy-card .icon {
-      font-size: 2.5rem;
-      color: #FFC857;
-      margin-bottom: 20px;
-    }
-    .performance-section {
-      background: linear-gradient(135deg, #00274D 0%, #004080 100%);
-      padding: 60px 0;
-      color: #FFFFFF;
-      text-align: center;
-    }
-    .performance-section h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 40px;
-    }
-    .performance-stats {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .performance-stats span {
-      color: #FFC857;
-    }
-    .cta-section {
-      background-color: #FFFFFF;
-      padding: 60px 0;
-      text-align: center;
-    }
-    .cta-section h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #00274D;
-      margin-bottom: 20px;
-    }
-    .cta-section p {
-      font-size: 1.25rem;
-      color: #555;
-      margin-bottom: 30px;
-    }
-    .cta-section .btn-primary {
-      background-color: #FFC857;
-      border: none;
-      color: #00274D;
-      font-weight: bold;
-      padding: 12px 25px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .cta-section .btn-primary:hover {
-      background-color: #00274D;
-      color: #FFFFFF;
     }
     .footer {
       background-color: #00274D;
@@ -173,20 +115,14 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Ingram Capital</a>
+      <a class="navbar-brand" href="#">Ingram Capital</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#strategies">Strategies</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#about">About Us</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
         </ul>
       </div>
@@ -194,137 +130,94 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section id="home" class="hero-section">
     <div class="container">
-      <h1>Ingram Capital</h1>
-      <p>Strategic Investments, Proven Returns</p>
+      <h1>Strategic Investment Management</h1>
+      <p>At Ingram Capital, we combine fundamental analysis with quantitative models to deliver superior risk-adjusted returns for our investors.</p>
+      <a href="#valuation" class="btn btn-lg">Company Valuation</a>
     </div>
   </section>
 
-  <!-- Investment Strategy -->
-  <section class="container my-5">
-    <h2 class="section-title">Our Investment Strategies</h2>
-    <div class="row g-4">
-      <!-- Equity Strategy -->
-      <div class="col-md-4">
-        <div class="strategy-card text-center">
-          <i class="fas fa-chart-line icon"></i>
-          <h4>Equity Investments</h4>
-          <p>We focus on high-conviction equity opportunities, leveraging fundamental analysis and market trends to deliver superior returns.</p>
-        </div>
-      </div>
-      <!-- Fixed Income -->
-      <div class="col-md-4">
-        <div class="strategy-card text-center">
-          <i class="fas fa-coins icon"></i>
-          <h4>Fixed Income</h4>
-          <p>Our fixed income strategies aim to generate stable returns through diversified portfolios of bonds and other debt instruments.</p>
-        </div>
-      </div>
-      <!-- Alternative Investments -->
-      <div class="col-md-4">
-        <div class="strategy-card text-center">
-          <i class="fas fa-cogs icon"></i>
-          <h4>Alternative Investments</h4>
-          <p>We explore alternative assets, including real estate, commodities, and private equity, to enhance portfolio diversification.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Performance Section -->
-  <section class="performance-section">
+  <!-- Company Valuation Section -->
+  <section id="valuation" class="investment-strategy py-5">
     <div class="container">
-      <h2>Proven Performance</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <p class="performance-stats">Annual Return: <span>+34.7%</span></p>
-        </div>
-        <div class="col-md-4">
-          <p class="performance-stats">Sharpe Ratio: <span>1.5</span></p>
-        </div>
-        <div class="col-md-4">
-          <p class="performance-stats">AUM: <span>N/A</span></p>
+      <h2 class="section-title text-center">Evaluate Company Valuation</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="stockPrice">Enter Stock Price ($):</label>
+            <input type="number" id="stockPrice" class="form-control" placeholder="Stock Price">
+          </div>
+          <div class="form-group">
+            <label for="sharesOutstanding">Enter Shares Outstanding:</label>
+            <input type="number" id="sharesOutstanding" class="form-control" placeholder="Shares Outstanding">
+          </div>
+          <div class="form-group">
+            <label for="debt">Enter Total Debt ($):</label>
+            <input type="number" id="debt" class="form-control" placeholder="Debt">
+          </div>
+          <div class="form-group">
+            <label for="cash">Enter Total Cash ($):</label>
+            <input type="number" id="cash" class="form-control" placeholder="Cash">
+          </div>
+          <div class="form-group">
+            <label for="ebitda">Enter Company EBITDA ($):</label>
+            <input type="number" id="ebitda" class="form-control" placeholder="EBITDA">
+          </div>
+          <div class="form-group">
+            <label for="industryEBITDA">Enter Industry Average EV/EBITDA Multiple:</label>
+            <input type="number" id="industryEBITDA" class="form-control" placeholder="Industry EV/EBITDA">
+          </div>
+          <button id="calculateBtn" class="btn btn-primary mt-3">Calculate Valuation</button>
+          <div id="valuationResult" class="mt-4"></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Invest with Confidence</h2>
-      <p>Partner with a hedge fund that prioritizes performance and transparency.</p>
-      <a href="mailto:invest@ingramcapital.com" class="btn btn-primary">Get Started</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="row g-4">
-        <!-- Company Info -->
-        <div class="col-md-4 text-center text-md-start">
-          <h5 class="mb-3">Ingram Capital</h5>
-          <p class="small">Pioneering business solutions through innovation and strategic expertise.</p>
-          <div class="mt-3">
-            <a href="mailto:ing.matteo.bs@gmail.com" class="d-block text-white-50 small">
-              <i class="fas fa-envelope me-2"></i>ing.matteo.bs@gmail.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-md-4 text-center">
-          <h5 class="mb-3">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="index.html#home" class="text-white-50">Home</a></li>
-            <li class="mb-2"><a href="index.html#strategies" class="text-white-50">Strategies</a></li>
-            <li class="mb-2"><a href="index.html#about" class="text-white-50">About Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Social Media -->
-        <div class="col-md-4 text-center text-md-end">
-          <h5 class="mb-3">Connect With Us</h5>
-          <div class="social-links">
-            <a href="https://www.instagram.com/ingram.matteo/" target="_blank" class="text-white-50 me-3">
-              <i class="fab fa-instagram fa-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/matteo-ingram/" target="_blank" class="text-white-50 me-3">
-              <i class="fab fa-linkedin fa-lg"></i>
-            </a>
-            <a href="https://x.com/matteooffical" class="text-white-50 me-3">
-              <i class="fab fa-twitter fa-lg"></i>
-            </a>
-          </div>
-          <div class="mt-4">
-            <a href="https://www.linkedin.com/in/matteo-ingram/" class="btn btn-outline-light btn-sm">Subscribe to Newsletter</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
       <div class="row mt-5">
         <div class="col-12 text-center">
-          <hr class="mb-4 opacity-25">
           <p class="small mb-0 text-white-50">
-            &copy; 2025 Ingram Capital. All rights reserved.<br>
-            <a href="#" class="text-white-50">Privacy Policy</a> | 
-            <a href="#" class="text-white-50">Terms of Service</a> | 
-            <a href="#" class="text-white-50">Cookie Policy</a>
+            &copy; 2025 Ingram Capital Management. All rights reserved.
           </p>
         </div>
       </div>
-
-      <!-- Back to Top -->
-      <a href="#home" class="btn btn-primary back-to-top">
-        <i class="fas fa-arrow-up"></i>
-      </a>
     </div>
   </footer>
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Function to calculate the valuation
+    document.getElementById('calculateBtn').addEventListener('click', function() {
+      const stockPrice = parseFloat(document.getElementById('stockPrice').value);
+      const sharesOutstanding = parseFloat(document.getElementById('sharesOutstanding').value);
+      const debt = parseFloat(document.getElementById('debt').value);
+      const cash = parseFloat(document.getElementById('cash').value);
+      const ebitda = parseFloat(document.getElementById('ebitda').value);
+      const industryEBITDA = parseFloat(document.getElementById('industryEBITDA').value);
+
+      // Calculate the Enterprise Value (EV)
+      const enterpriseValue = (stockPrice * sharesOutstanding) + debt - cash;
+
+      // Calculate the EV/EBITDA Multiple
+      const evEbitdaMultiple = enterpriseValue / ebitda;
+
+      // Compare to the industry EV/EBITDA multiple
+      const result = evEbitdaMultiple > industryEBITDA ? 'Overvalued' : 'Undervalued';
+
+      // Display the result
+      document.getElementById('valuationResult').innerHTML = `
+        <h4>Valuation Analysis:</h4>
+        <p>Company EV/EBITDA Multiple: ${evEbitdaMultiple.toFixed(2)}</p>
+        <p>Industry EV/EBITDA Multiple: ${industryEBITDA}</p>
+        <p><strong>Conclusion: ${result}</strong></p>
+      `;
+    });
+  </script>
 </body>
 </html>
