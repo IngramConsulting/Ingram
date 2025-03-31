@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingram Capital | Investment Management & Hedge Fund</title>
+  <title>Ingram Capital | Stock Research</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
@@ -35,12 +35,13 @@
     .nav-link:hover {
       color: #FFC857 !important;
     }
+    
     .hero-section {
       background: linear-gradient(rgba(0, 39, 77, 0.8), rgba(0, 39, 77, 0.8)), url('LondonBG.jpg');
       background-size: cover;
       background-position: center;
       color: #FFFFFF;
-      height: 100vh;
+      height: 60vh;
       text-align: center;
       display: flex;
       justify-content: center;
@@ -56,41 +57,54 @@
       margin-top: 20px;
       margin-bottom: 40px;
     }
-    .hero-section .btn {
-      font-size: 1rem;
-      padding: 10px 30px;
-      background-color: #FFC857;
-      color: #00274D;
-      border: none;
-    }
-    .hero-section .btn:hover {
-      background-color: #FFFFFF;
-      color: #00274D;
-    }
+    
     .section-title {
       font-size: 2.5rem;
       font-weight: bold;
       color: #00274D;
       margin-bottom: 40px;
     }
-    .service-card {
+    
+    .stock-card {
       background-color: #FFFFFF;
       border: none;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       transition: transform 0.3s ease;
-      position: relative;
     }
-    .service-card:hover {
-      transform: translateY(-10px);
+    .stock-card:hover {
+      transform: translateY(-5px);
     }
-    .service-card h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
+    .stock-card h3 {
       color: #00274D;
+      border-bottom: 2px solid #FFC857;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
     }
+    
+    .stock-chart {
+      height: 300px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .performance-summary {
+      background-color: #00274D;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    
+    .performance-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #FFC857;
+    }
+    
     .footer {
       background-color: #00274D;
       padding: 60px 0 30px;
@@ -108,6 +122,7 @@
       color: #FFC857 !important;
       text-decoration: none;
     }
+    
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -122,237 +137,357 @@
       border: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    .back-to-top:hover {
-      background-color: #fff;
-      transform: translateY(-3px);
-    }
-    .service-card {
-      background-color: #FFFFFF;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      color: black;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    }
-    .service-card h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #00274D;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 200, 87, 0.2), transparent);
-      transition: left 0.5s ease;
-    }
-    .service-card:hover::before {
-      left: 100%;
-    }
-    
-    .stock-market-section {
-      background-color: #fff;
-      padding: 50px 0;
-    }
-    
-    .performance-section {
-      background-color: #00274D;
-      color: white;
-      padding: 60px 0;
-    }
-    
-    .stat-number {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #FFC857;
-    }
-    
-    .stat-label {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    
-    .investment-strategy {
-      padding: 60px 0;
-      background-color: #f8f9fa;
-    }
-    
-    .strategy-card {
-      border-left: 4px solid #FFC857;
-      padding-left: 20px;
-      margin-bottom: 30px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Ingram Capital</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#strategies">Investment Strategies</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#performance">Performance</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Us</a>
-          </li>
-        </ul>
-      </div>
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="Index.html">Ingram Capital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Dropdown for Tools -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tools
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="page2.html">CEM</a></li>
+            <li><a class="dropdown-item" href="#">Research</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Us</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero-section">
+  <section class="hero-section">
     <div class="container">
-      <h1>Strategic Investment Management</h1>
-      <p>At Ingram Capital, we combine fundamental analysis with quantitative models to deliver superior risk-adjusted returns for our investors.</p>
-      <a href="#strategies" class="btn btn-lg">Our Investment Approach</a>
+      <h1>Stock Research Center</h1>
+      <p>In-depth analysis and performance tracking of our top investment opportunities</p>
     </div>
   </section>
 
-  <!-- Investment Strategies Section -->
-  <section id="strategies" class="investment-strategy">
+  <!-- Stocks Section -->
+  <section class="py-5">
     <div class="container">
-      <h2 class="section-title text-center">Our Investment Strategies</h2>
+      <h2 class="section-title text-center">Featured Stocks</h2>
+      
+      <!-- Performance Summary -->
+      <div class="performance-summary">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Portfolio Performance Summary</h3>
+            <p>The combined yearly performance of our featured stocks shows the strength of our selection strategy across different market sectors.</p>
+          </div>
+          <div class="col-md-4 text-end">
+            <div class="performance-number">+28.4%</div>
+            <p>Average 1-Year Return</p>
+          </div>
+        </div>
+      </div>
+      
       <div class="row">
-        <div class="col-md-6">
-          <div class="strategy-card">
-            <h3>Long/Short Equity</h3>
-            <p>Our flagship strategy combines deep fundamental research with quantitative screening to identify mispriced securities across global markets. We maintain a disciplined approach to both long and short positions, focusing on companies with strong valuation metrics and identifiable catalysts.</p>
+        
+        <!-- General Electric -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>General Electric (GE)</h3>
+            <div class="stock-chart">
+              <!-- TradingView Widget -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NYSE:GE",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>General Electric is a multinational conglomerate operating in aviation, power, renewable energy, and healthcare. After years of restructuring, GE has refocused on its core industrial businesses and is showing signs of turnaround.</p>
+            <p><strong>Sector:</strong> Industrials</p>
+            <p><strong>Key Metrics:</strong> P/E 15.2, Div Yield 0.3%, Market Cap $140B</p>
+            <p><strong>1-Year Performance:</strong> +42.5%</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="strategy-card">
-            <h3>Quantitative Value</h3>
-            <p>Leveraging proprietary algorithms and machine learning models, we systematically identify undervalued securities with strong balance sheets and improving fundamentals. Our quantitative approach allows us to efficiently scan thousands of securities across multiple markets.</p>
+        
+        <!-- Alibaba -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Alibaba Group (BABA)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NYSE:BABA",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Alibaba is China's largest e-commerce company and a leader in cloud computing, digital media, and innovation initiatives. While facing regulatory challenges, it remains a dominant force in China's digital economy.</p>
+            <p><strong>Sector:</strong> Consumer Discretionary</p>
+            <p><strong>Key Metrics:</strong> P/E 13.8, Market Cap $190B</p>
+            <p><strong>1-Year Performance:</strong> -12.3%</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="strategy-card">
-            <h3>Event-Driven</h3>
-            <p>We capitalize on corporate events such as mergers, spin-offs, restructurings, and other special situations where pricing inefficiencies often emerge. Our team's experience in corporate finance and legal analysis gives us an edge in assessing event outcomes.</p>
+        
+        <!-- JD.com -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>JD.com (JD)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:JD",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>JD.com is China's largest online direct sales company, known for its efficient logistics network and authentic product guarantees. The company has been expanding into healthcare and international markets.</p>
+            <p><strong>Sector:</strong> Consumer Discretionary</p>
+            <p><strong>Key Metrics:</strong> P/E 12.3, Market Cap $45B</p>
+            <p><strong>1-Year Performance:</strong> -8.7%</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="strategy-card">
-            <h3>Sustainable Growth</h3>
-            <p>Focusing on companies driving innovation in renewable energy, clean technology, and sustainable infrastructure. We combine traditional financial analysis with ESG metrics to identify leaders in the transition to a low-carbon economy.</p>
+        
+        <!-- Baidu -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Baidu (BIDU)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:BIDU",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Baidu is China's leading search engine company that has expanded into AI, autonomous driving, and cloud computing. Its Apollo autonomous driving platform is considered a leader in China's smart transportation sector.</p>
+            <p><strong>Sector:</strong> Communication Services</p>
+            <p><strong>Key Metrics:</strong> P/E 14.5, Market Cap $35B</p>
+            <p><strong>1-Year Performance:</strong> -15.2%</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Performance Section -->
-  <section id="performance" class="performance-section">
-    <div class="container">
-      <h2 class="section-title text-center text-white">Investment Performance</h2>
-      <div class="row text-center">
-        <div class="col-md-3">
-          <div class="stat-number">29.7%</div>
-          <div class="stat-label">Annualized Return</div>
-          <p class="text-white-50 mt-2">Since inception</p>
+        
+        <!-- Tesla -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Tesla (TSLA)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:TSLA",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Tesla is the market leader in electric vehicles and energy storage systems. The company continues to innovate in battery technology and autonomous driving while expanding production capacity globally.</p>
+            <p><strong>Sector:</strong> Consumer Discretionary</p>
+            <p><strong>Key Metrics:</strong> P/E 65.3, Market Cap $600B</p>
+            <p><strong>1-Year Performance:</strong> +58.9%</p>
+          </div>
         </div>
-        <div class="col-md-3">
-          <div class="stat-number">2.4</div>
-          <div class="stat-label">Sharpe Ratio</div>
-          <p class="text-white-50 mt-2">1-year average</p>
+        
+        <!-- Microsoft -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Microsoft (MSFT)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:MSFT",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Microsoft is a technology leader in cloud computing (Azure), productivity software (Office), and enterprise solutions. Its diversified business model and strong cash flows make it a core holding in tech portfolios.</p>
+            <p><strong>Sector:</strong> Information Technology</p>
+            <p><strong>Key Metrics:</strong> P/E 32.7, Div Yield 0.7%, Market Cap $2.1T</p>
+            <p><strong>1-Year Performance:</strong> +32.4%</p>
+          </div>
         </div>
-        <div class="col-md-3">
-          <div class="stat-number">N/A</div>
-          <div class="stat-label">Assets Under Management</div>
-          <p class="text-white-50 mt-2">As of current quarter</p>
+        
+        <!-- Amazon -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Amazon (AMZN)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:AMZN",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Amazon dominates e-commerce and cloud computing through AWS. The company continues to invest in logistics, healthcare, and advertising while improving profitability across its segments.</p>
+            <p><strong>Sector:</strong> Consumer Discretionary</p>
+            <p><strong>Key Metrics:</strong> P/E 52.4, Market Cap $1.5T</p>
+            <p><strong>1-Year Performance:</strong> +45.6%</p>
+          </div>
         </div>
-        <div class="col-md-3">
-          <div class="stat-number">2%</div>
-          <div class="stat-label">Annual Volatility</div>
-          <p class="text-white-50 mt-2">1-year average</p>
+        
+        <!-- Nvidia -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Nvidia (NVDA)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:NVDA",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Nvidia is the leading designer of GPUs for gaming, professional visualization, data centers, and automotive markets. Its chips are essential for AI, machine learning, and the metaverse.</p>
+            <p><strong>Sector:</strong> Information Technology</p>
+            <p><strong>Key Metrics:</strong> P/E 42.8, Market Cap $1.1T</p>
+            <p><strong>1-Year Performance:</strong> +189.2%</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stock Market Live Updates -->
-  <section id="market" class="stock-market-section">
-    <div class="container">
-      <h2 class="section-title text-center">Live Market Performance</h2>
-      <div class="tradingview-widget-container">
-        <div id="tradingview-widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js">
-          {
-            "colorTheme": "light",
-            "dateRange": "12M",
-            "showChart": true,
-            "locale": "en",
-            "isTransparent": false,
-            "showSymbolLogo": true,
-            "tabs": [
-              {
-                "title": "Indices",
-                "symbols": [
-                  { "s": "OANDA:SPX500USD", "d": "S&P 500" },
-                  { "s": "OANDA:NAS100USD", "d": "NASDAQ 100" },
-                  { "s": "FOREXCOM:DJI", "d": "Dow Jones" }
-                ]
-              },
-              {
-                "title": "Commodities",
-                "symbols": [
-                  { "s": "TVC:GOLD", "d": "Gold" },
-                  { "s": "TVC:SILVER", "d": "Silver" },
-                  { "s": "NYMEX:CL1!", "d": "Crude Oil" }
-                ]
-              },
-              {
-                "title": "Forex",
-                "symbols": [
-                  { "s": "FX:EURUSD", "d": "EUR/USD" },
-                  { "s": "FX:GBPUSD", "d": "GBP/USD" },
-                  { "s": "FX:USDJPY", "d": "USD/JPY" }
-                ]
-              }
-            ]
-          }
-        </script>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about" class="bg-light py-5">
-    <div class="container">
-      <h2 class="section-title text-center">About Ingram Capital</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <p>Founded with the vision of delivering superior risk-adjusted returns through disciplined investment strategies, Ingram Capital has grown into a respected investment management firm serving institutional and high-net-worth investors.</p>
-          <p>Our team combines decades of experience across hedge funds, investment banks, and asset management firms. We bring together fundamental research, quantitative analysis, and rigorous risk management to identify investment opportunities others may overlook.</p>
+        
+        <!-- Berkshire Hathaway -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>Berkshire Hathaway (BRK.B)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NYSE:BRK.B",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>Warren Buffett's conglomerate owns businesses across insurance, railroads, utilities, manufacturing and holds a massive stock portfolio. Known for its value investing approach and strong capital allocation.</p>
+            <p><strong>Sector:</strong> Financials</p>
+            <p><strong>Key Metrics:</strong> P/E 9.2, Market Cap $650B</p>
+            <p><strong>1-Year Performance:</strong> +22.1%</p>
+          </div>
         </div>
-        <div class="col-md-6">
-          <p>We operate with a performance-driven culture that emphasizes transparency, accountability, and alignment of interests with our investors. Our investment professionals are significant investors in our funds, ensuring our interests are fully aligned with those of our clients.</p>
-          <p>Our approach is rooted in deep fundamental analysis, complemented by proprietary quantitative models that help us identify valuation anomalies and emerging trends across global markets.</p>
+        
+        <!-- First Solar -->
+        <div class="col-lg-6">
+          <div class="stock-card">
+            <h3>First Solar (FSLR)</h3>
+            <div class="stock-chart">
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                {
+                  "symbol": "NASDAQ:FSLR",
+                  "width": "100%",
+                  "height": "100%",
+                  "locale": "en",
+                  "dateRange": "12M",
+                  "colorTheme": "light",
+                  "isTransparent": false,
+                  "autosize": true,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+            </div>
+            <p>First Solar is a leading American solar technology company and global provider of comprehensive PV solar solutions. The company is benefiting from the global shift to renewable energy and favorable government policies.</p>
+            <p><strong>Sector:</strong> Technology</p>
+            <p><strong>Key Metrics:</strong> P/E 19.8, Market Cap $8.5B</p>
+            <p><strong>1-Year Performance:</strong> -3.4%</p>
+          </div>
         </div>
+        
       </div>
     </div>
   </section>
@@ -376,7 +511,7 @@
         <div class="col-md-4 text-center">
           <h5 class="mb-3">Quick Links</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#home" class="text-white-50">Home</a></li>
+            <li class="mb-2"><a href="Index.html" class="text-white-50">Home</a></li>
             <li class="mb-2"><a href="#strategies" class="text-white-50">Investment Strategies</a></li>
             <li class="mb-2"><a href="#performance" class="text-white-50">Performance</a></li>
             <li class="mb-2"><a href="#about" class="text-white-50">About Us</a></li>
@@ -395,7 +530,7 @@
             </a>
           </div>
           <div class="mt-4">
-            <a href="#contact" class="btn btn-outline-light btn-sm">Investor Login</a>
+            <a href="#" class="btn btn-outline-light btn-sm">Investor Login</a>
           </div>
         </div>
       </div>
@@ -414,7 +549,7 @@
       </div>
 
       <!-- Back to Top -->
-      <a href="#home" class="btn btn-primary back-to-top">
+      <a href="#" class="btn btn-primary back-to-top">
         <i class="fas fa-arrow-up"></i>
       </a>
     </div>
